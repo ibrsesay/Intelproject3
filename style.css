@@ -1,0 +1,82 @@
+/* Add your CSS here */
+
+/* Style for the body */
+body {
+  font-family: Arial, sans-serif; /* Easy-to-read font */
+  background-color: #81add8; /* Light Intel-inspired background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the header content */
+header div {
+  text-align: center;
+  padding: 32px 16px 16px 16px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #0071c5; /* Intel blue */
+}
+
+/* Style the Intel logo */
+header img {
+  width: 120px;
+  margin-bottom: 16px;
+}
+
+/* Main headline */
+header h1 {
+  color: #0071c5; /* Intel blue */
+  margin-bottom: 8px;
+
+}
+header h2 {color: #0071c5; /* Intel blue */
+  margin-bottom: 8px;
+  
+
+}
+
+/* Timeline section uses Flexbox */
+section {
+  display: flex;
+  flex-direction: row; /* Horizontal on large screens */
+  overflow-x: auto; /* Scroll if too wide */
+  gap: 16px; /* Space between cards */
+  padding: 24px 8px;
+}
+
+/* Timeline cards */
+section > div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  min-width: 250px;
+  max-width: 280px;
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+/* Card images */
+section img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Hover effect for cards */
+section > div:hover {
+  transform: scale(1.05);
+  border: 2px solid #0071c5;
+  box-shadow: 0 4px 16px rgba(0,113,197,0.15);
+}
+
+/* Responsive: stack cards vertically on small screens */
+@media (max-width: 700px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  section > div {
+    width: 90%;
+    max-width: 400px;
+  }
+}
