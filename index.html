@@ -1,4 +1,28 @@
 <!-- 
+  If your GitHub Pages link is not showing the newest version:
+  1. Make sure you saved your file.
+  2. Run these commands in your terminal:
+     git add index.html
+     git commit -m "Update website"
+     git push
+  3. Wait a few minutes for GitHub Pages to update.
+  4. Try refreshing your browser (use Ctrl+Shift+R or Cmd+Shift+R for a hard refresh).
+  5. If it still doesn't work, ask your teacher for help!
+-->
+<!-- 
+  To save your changes and update your website on GitHub, follow these steps:
+
+  1. Open your terminal in your project folder.
+  2. Type: git add index.html
+     (This stages your changes.)
+  3. Type: git commit -m "Describe your changes here"
+     (This saves your changes with a message.)
+  4. Type: git push
+     (This uploads your changes to GitHub.)
+
+  After pushing, wait a few minutes and refresh your website link to see the updates!
+-->
+<!-- 
   To make your website public:
   1. Upload your project folder to GitHub.
   2. Enable GitHub Pages in your repository settings.
@@ -6,12 +30,16 @@
   Ask your teacher for help if you get stuck!
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl"> <!-- Set RTL direction for the whole page -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Intel:Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Add Bootstrap CSS for grid and responsive columns -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- Add Bootstrap Icons CDN for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,7 +47,7 @@
   <header>
     <div>
       <!-- Ask Copilot to teach you about `.svg` 🙂 -->
-      <img src="img/image copy 5.png" alt="Intel Logo" />
+      <img src="img/image copy 5.png" alt="Intel company logo" />
       <!-- Main Heading -->
       <h1>
         Intel
@@ -42,7 +70,7 @@
     <div>
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
+      <img src="img/1.jpg" alt="Founders of Intel in 1968" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -54,7 +82,7 @@
     <div>
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
+      <img src="img/2.jpg" alt="Intel 4004 microprocessor" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -66,7 +94,7 @@
     <div>
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
+      <img src="img/3.jpg" alt="Intel 8086 processor" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -77,7 +105,7 @@
     <div>
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
+      <img src="img/4.jpg" alt="Intel 386 processor" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -89,7 +117,7 @@
     <div>
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/image.png" alt="Placeholder Image" />
+      <img src="img/image.png" alt="Intel factory emissions" />
       <p>
         Intel reaches peak greenhouse gas (GHG) emissions from its 
         global operations, prompting a renewed focus on sustainability 
@@ -102,7 +130,7 @@
     <div>
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="img/image copy 3.png" alt="Placeholder Image" />
+      <img src="img/image copy 3.png" alt="Intel RISE strategy" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -114,7 +142,7 @@
     <div>
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="img/image copy.png" alt="Placeholder Image" />
+      <img src="img/image copy.png" alt="Net-zero greenhouse gas announcement" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -126,7 +154,7 @@
     <div>
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="img/image copy 4.png" alt="Placeholder Image" />
+      <img src="img/image copy 4.png" alt="Intel renewable electricity achievement" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -138,7 +166,7 @@
     <div>
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="img/image copy 2.png" alt="Placeholder Image" />
+      <img src="img/image copy 2.png" alt="Intel Sustainability Summit" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -147,5 +175,142 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- New Section: Bootstrap 3-Column Layout with Icons and Buttons -->
+  <section>
+    <!-- Bootstrap container for proper spacing -->
+    <div class="container">
+      <!-- Bootstrap row to hold columns -->
+      <div class="row">
+        <!-- First column -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <!-- Icon and heading, right-aligned for RTL -->
+          <h3 class="text-end">
+            <i class="bi bi-lightbulb-fill"></i> <!-- Innovation icon -->
+            Innovation
+          </h3>
+          <p class="text-end">
+            Intel continues to drive innovation in technology, making computers faster and more efficient.
+          </p>
+          <!-- Learn More button opens a modal -->
+          <div class="text-end">
+            <a href="#" 
+               class="btn btn-dark" 
+               aria-label="Learn more about Innovation"
+               data-bs-toggle="modal" 
+               data-bs-target="#innovationModal">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- Second column -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <h3 class="text-end">
+            <i class="bi bi-leaf-fill"></i> <!-- Sustainability icon -->
+            Sustainability
+          </h3>
+          <p class="text-end">
+            The company is committed to reducing its environmental impact through sustainable practices.
+          </p>
+          <div class="text-end">
+            <a href="#" class="btn btn-dark" aria-label="Learn more about Sustainability">Learn More</a>
+          </div>
+        </div>
+        <!-- Third column -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <h3 class="text-end">
+            <i class="bi bi-people-fill"></i> <!-- Community icon -->
+            Community
+          </h3>
+          <p class="text-end">
+            Intel supports communities worldwide by investing in education and digital skills.
+          </p>
+          <div class="text-end">
+            <a href="#" class="btn btn-dark" aria-label="Learn more about Community">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessible Subscription Form Section -->
+  <section>
+    <div class="container my-4">
+      <!-- Accessible form heading -->
+      <h2 class="text-end">Subscribe to Our Newsletter</h2>
+      <form>
+        <div class="mb-3 text-end">
+          <!-- Label is associated with the input using 'for' and 'id' -->
+          <label for="email" class="form-label">Email address</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email" 
+            placeholder="name@example.com" 
+            aria-label="Email address"
+            required
+          />
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-dark">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap Modal Component for Innovation -->
+  <!-- This modal appears when the first "Learn More" button is clicked -->
+  <div class="modal fade" id="innovationModal" tabindex="-1" aria-labelledby="innovationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal header with close button -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="innovationModalLabel">More About Innovation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal body with extra info -->
+        <div class="modal-body">
+          Intel's innovations have transformed the world of computing, from the first microprocessor to today's advanced technologies. The company invests in research and development to create faster, smarter, and more energy-efficient devices.
+        </div>
+        <!-- Modal footer with close button -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript to detect language changes and set RTL or LTR direction -->
+  <script>
+    // List of languages that use RTL direction
+    const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+
+    // Function to update the direction based on the language
+    function updateDirection() {
+      // Get the <html> element
+      const html = document.documentElement;
+      // Get the language code (first two letters)
+      const lang = html.lang ? html.lang.substring(0,2).toLowerCase() : 'en';
+      // If the language is RTL, set dir="rtl", else set dir="ltr"
+      if (rtlLanguages.includes(lang)) {
+        html.setAttribute('dir', 'rtl');
+      } else {
+        html.setAttribute('dir', 'ltr');
+      }
+    }
+
+    // Run on page load
+    updateDirection();
+
+    // Optional: Listen for language changes (if changed dynamically)
+    // This example listens for a custom event 'languageChange'
+    document.addEventListener('languageChange', function(e) {
+      // If you change html.lang in your code, dispatch this event to update direction
+      updateDirection();
+    });
+  </script>
+  <!-- Bootstrap JS (needed for modal to work) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
