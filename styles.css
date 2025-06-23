@@ -1,0 +1,186 @@
+/* styles.css */
+/* This file contains simple styles for the Water Quest game */
+
+body {
+    font-family: Arial, sans-serif;
+    /* Waterfall background using a simple blue gradient */
+    background: linear-gradient(to bottom, #b3e5fc 0%, #0288d1 100%);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#game-area {
+    width: 90vw;
+    max-width: 400px;
+    height: 60vw;
+    max-height: 300px;
+    background-color: #b3e5fc; /* Lighter blue for game area */
+    margin: 20px auto;
+    position: relative;
+    border: 2px solid #0288d1;
+    box-sizing: border-box;
+}
+
+#player {
+    width: 8vw;
+    max-width: 30px;
+    height: 8vw;
+    max-height: 30px;
+    background-color: #ffd600; /* Yellow for player */
+    position: absolute;
+    left: 10px;
+    top: 135px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.water-drop {
+    width: 5vw;
+    max-width: 20px;
+    height: 5vw;
+    max-height: 20px;
+    background-color: #00bcd4; /* Blue for water drop */
+    position: absolute;
+    left: 180px;
+    top: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.obstacle {
+    width: 8vw;
+    max-width: 30px;
+    height: 8vw;
+    max-height: 30px;
+    background-color: #888; /* Gray for trash */
+    position: absolute;
+    left: 250px;
+    top: 180px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.obstacle3 {
+    width: 8vw;
+    max-width: 30px;
+    height: 8vw;
+    max-height: 30px;
+    background-color: #888; /* Gray for trash */
+    position: absolute;
+    left: 180px;
+    top: 120px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.can {
+    width: 7vw;
+    max-width: 28px;
+    height: 10vw;
+    max-height: 40px;
+    background-color: #ffd600; /* Charity: water yellow */
+    position: absolute;
+    border-radius: 5px 5px 8px 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+.can:active {
+    transform: scale(0.95);
+    background-color: #ffe066;
+}
+
+#village {
+    width: 10vw;
+    max-width: 40px;
+    height: 10vw;
+    max-height: 40px;
+    background-color: #4caf50; /* Green for village */
+    position: absolute;
+    right: 10px;
+    top: 130px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+#score {
+    font-size: 1.2em;
+    color: #0288d1;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Confetti effect styles */
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+}
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: #ffd600;
+    border-radius: 3px;
+    opacity: 0.8;
+    animation: confetti-fall 1.5s linear forwards;
+}
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.pollution {
+    width: 8vw;
+    max-width: 30px;
+    height: 8vw;
+    max-height: 30px;
+    background-color: #39ff14; /* Bright green for toxic */
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #222;
+}
+
+.dragon-bg {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 0; /* Behind other game elements */
+    opacity: 0.3; /* Faint so it doesn't distract */
+    pointer-events: none; /* Clicks go through */
+}
+
+@media (max-width: 500px) {
+    #game-area {
+        width: 98vw;
+        height: 65vw;
+        max-width: 98vw;
+        max-height: 65vw;
+    }
+}
